@@ -1,3 +1,6 @@
+# 此项目仅适配于日服
+This project is only compatible with FGO Japan
+
 # 基于FGO-py的丸子制造机
 
 FGO-ExpBall是专门用来搓丸子的程序,如果你不知道什么是[FGO-py](https://github.com/hgjazhgj/FGO-py),就先去看看吧  
@@ -69,6 +72,9 @@ e.g. `main -s 5 -a 5 -c habetrot 2 -c 1488 4`代表在5秒后搓5轮丸子,途�
 内容有点长,所以发到[B站专栏](https://www.bilibili.com/read/cv18100391)了,如果能有点赞和投币我会很开心  
 
 ## 更新日志
+
+## 2023/01.22 v1.8.0-JP
+Upd:针对FGO日服UI修改
 
 ## 2022/11.12 v1.8.0
 

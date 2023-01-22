@@ -87,7 +87,7 @@ Some commands support <command> [<subcommand> ...] {{-h, --help}} for further in
     def do_screenshot(self,line):
         'Take a screenshot'
         assert fgoDevice.device.available
-        fgoKernel.Detect(0).save()
+        fgoKernel.Detect().save()
     def do_169(self,line):
         'Adapt none 16:9 screen'
         arg=parser_169.parse_args(line.split())

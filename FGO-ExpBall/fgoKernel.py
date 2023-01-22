@@ -86,8 +86,8 @@ class ExpBall:
             if self.runOnce: # 每行7个 全部 1星 等级顺序 智能筛选 降序
                 while not SELECT_GIRD.appear():
                     SELECT_GIRD.click(2)
-                while FILTER_EVENT.appear():
-                    FILTER_EVENT.click(.8)
+                while FILTER_EVENT_ALL.appear():
+                    FILTER_EVENT_ALL.click(.8)
                 FILTER_FILTER.click(.8)
                 FILTER_RESET.click(.5)
                 FILTER_STAR_1.click(.5)
@@ -116,8 +116,8 @@ class ExpBall:
             if self.runOnce: # 每行7个 全部 12星 稀有度顺序 智能筛选 降序
                 while not SELECT_GIRD.appear():
                     SELECT_GIRD.click(2)
-                while FILTER_EVENT.appear():
-                    FILTER_EVENT.click(.8)
+                while FILTER_EVENT_ALL.appear():
+                    FILTER_EVENT_ALL.click(.8)
                 FILTER_FILTER.click(.8)
                 FILTER_RESET.click(.5)
                 FILTER_STAR_1.click(.5)
@@ -156,9 +156,12 @@ class ExpBall:
                     SELECT_GIRD.click(2)
                 FILTER_FILTER.click(.8)
                 FILTER_RESET.click(.5)
-                FILTER_SCROLL.click(.5)
-                FILTER_EXP.click(.5)
-                FILTER_FOU.click(.5)
+                FILTER_SCROLL_END.click(.5)
+                FILTER_SCROOL_CATEGORY.click(.5)
+                while not FILTER_EXP.appear():
+                    FILTER_EXP.click(.5)
+                while not FILTER_FOU.appear():
+                    FILTER_FOU.click(.5)
                 FILTER_SUBMIT.click(.8)
             while True:
                 self.selectAll()
@@ -187,6 +190,9 @@ class ExpBall:
 
     def sell(self):
         while True:
+            if FILTER_NONE.appear():
+                FILTER_CANCEL.click(1)
+                break
             self.selectAll()
             if SELECT_FINISH.appear():
                 break
